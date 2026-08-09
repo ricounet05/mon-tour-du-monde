@@ -248,6 +248,13 @@ const countries = {
         ]
     },
 
+    "Egypt": {
+    status: "visited",
+    cities: [
+        { name: "Cairo", lat: 30.0444, lng: 31.2357 },
+        { name: "Luxor", lat: 25.6872, lng: 32.6396 }
+    ]
+},
 
     /* =====================================================
        🟠 UPCOMING — TES ADVENTURE
@@ -479,4 +486,15 @@ const countries = {
         status: "upcoming",
         cities: []
     }
+};
+
+"Australia": {
+    status: "upcoming",
+    cities: []
+},
+
+"New Zealand": {
+    status: "upcoming",
+    cities: []
+},
 };
