@@ -1,0 +1,303 @@
+/* =========================================================
+   MON TOUR DU MONDE — TES ADVENTURE
+   Style principal
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f5f2;
+    color: #202522;
+}
+
+/* =========================================================
+   EN-TÊTE
+   ========================================================= */
+
+.site-header {
+    width: 100%;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #d8ddd8;
+}
+
+.brand {
+    flex: 0 0 auto;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 1.1;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.brand p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #68706b;
+}
+
+/* =========================================================
+   LÉGENDE
+   ========================================================= */
+
+.legend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 14px 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    color: #4c554f;
+    white-space: nowrap;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.legend-color.visited {
+    background: #3f8f5a;
+}
+
+.legend-color.upcoming {
+    background: #d59a3a;
+}
+
+.legend-color.other {
+    background: #d9ddd9;
+}
+
+/* =========================================================
+   CARTE
+   ========================================================= */
+
+main {
+    width: 100%;
+}
+
+.map-section {
+    width: 100%;
+    padding: 20px;
+}
+
+#world-map {
+    width: 100%;
+    height: calc(100vh - 150px);
+    min-height: 520px;
+    background: #dce9ef;
+    border: 1px solid #cbd3d0;
+    overflow: hidden;
+}
+
+/* =========================================================
+   LEAFLET
+   ========================================================= */
+
+.leaflet-container {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #dce9ef;
+}
+
+.leaflet-control-zoom {
+    border: 0 !important;
+}
+
+.leaflet-control-zoom a {
+    width: 38px !important;
+    height: 38px !important;
+    line-height: 38px !important;
+    font-size: 20px !important;
+}
+
+.leaflet-control-attribution {
+    font-size: 10px;
+}
+
+/* =========================================================
+   PAYS
+   ========================================================= */
+
+.country-label {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    color: #17201a;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    text-shadow:
+        1px 1px 2px #ffffff,
+        -1px -1px 2px #ffffff,
+        1px -1px 2px #ffffff,
+        -1px 1px 2px #ffffff;
+}
+
+.country-label::before {
+    display: none;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLETTE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .site-header {
+        padding: 16px 18px;
+    }
+
+    .brand h1 {
+        font-size: 22px;
+    }
+
+    .brand p {
+        font-size: 12px;
+    }
+
+    .legend {
+        gap: 10px 14px;
+    }
+
+    .legend-item {
+        font-size: 13px;
+    }
+
+    .map-section {
+        padding: 12px;
+    }
+
+    #world-map {
+        height: calc(100vh - 125px);
+        min-height: 480px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE — GSM
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .site-header {
+        padding: 13px 12px;
+        display: block;
+    }
+
+    .brand {
+        text-align: center;
+    }
+
+    .brand h1 {
+        font-size: 19px;
+        letter-spacing: 1px;
+    }
+
+    .brand p {
+        margin-top: 4px;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .legend {
+        margin-top: 11px;
+        justify-content: center;
+        gap: 7px 12px;
+    }
+
+    .legend-item {
+        font-size: 11px;
+        gap: 5px;
+    }
+
+    .legend-color {
+        width: 12px;
+        height: 12px;
+    }
+
+    .map-section {
+        padding: 0;
+    }
+
+    #world-map {
+        width: 100%;
+        height: calc(100vh - 105px);
+        min-height: 430px;
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+    }
+
+    .country-label {
+        font-size: 9px;
+    }
+
+    .leaflet-control-zoom {
+        margin: 10px !important;
+    }
+
+    .leaflet-control-zoom a {
+        width: 42px !important;
+        height: 42px !important;
+        line-height: 42px !important;
+        font-size: 22px !important;
+    }
+}
+
+/* =========================================================
+   PETITS GSM
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .brand h1 {
+        font-size: 17px;
+    }
+
+    .brand p {
+        font-size: 10px;
+    }
+
+    .legend {
+        gap: 6px 9px;
+    }
+
+    .legend-item {
+        font-size: 10px;
+    }
+
+    .country-label {
+        font-size: 8px;
+    }
+}
