@@ -485,8 +485,7 @@ const countries = {
     "Suriname": {
         status: "upcoming",
         cities: []
-    }
-};
+    },
 
 "Australia": {
     status: "upcoming",
