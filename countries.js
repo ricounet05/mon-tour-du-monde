@@ -495,5 +495,5 @@ const countries = {
 "New Zealand": {
     status: "upcoming",
     cities: []
-},
+}
 };
