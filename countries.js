@@ -487,13 +487,13 @@ const countries = {
         cities: []
     },
 
-"Australia": {
-    status: "upcoming",
-    cities: []
-},
+    "Australia": {
+        status: "upcoming",
+        cities: []
+    },
 
-"New Zealand": {
-    status: "upcoming",
-    cities: []
-}
+    "New Zealand": {
+        status: "upcoming",
+        cities: []
+    }
 };
