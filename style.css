@@ -1,19 +1,12 @@
-/* =========================================================
-   MON TOUR DU MONDE — TES ADVENTURE
-   ========================================================= */
-
 * {
     box-sizing: border-box;
 }
-
 
 html,
 body {
     margin: 0;
     padding: 0;
-
     width: 100%;
-
     min-height: 100%;
 
     font-family:
@@ -22,7 +15,6 @@ body {
         sans-serif;
 
     background: #ffffff;
-
     color: #1d241f;
 }
 
@@ -32,32 +24,23 @@ body {
    ========================================================= */
 
 .site-header {
-
     width: 100%;
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 
     gap: 30px;
 
-    padding:
-        22px
-        30px
-        18px;
+    padding: 22px 30px 18px;
 
     background: #ffffff;
 
-    border-bottom:
-        1px solid #e2e5e2;
-
+    border-bottom: 1px solid #e2e5e2;
 }
 
 
 .brand h1 {
-
     margin: 0;
 
     font-size: clamp(
@@ -67,23 +50,17 @@ body {
     );
 
     letter-spacing: 1px;
-
 }
 
 
 .brand p {
-
-    margin:
-        7px
-        0
-        0;
+    margin: 7px 0 0;
 
     font-size: 14px;
 
     letter-spacing: 3px;
 
     color: #6d746f;
-
 }
 
 
@@ -92,22 +69,17 @@ body {
    ========================================================= */
 
 .legend {
-
     display: flex;
-
     align-items: center;
 
     gap: 20px;
 
     flex-wrap: wrap;
-
 }
 
 
 .legend-item {
-
     display: flex;
-
     align-items: center;
 
     gap: 8px;
@@ -115,45 +87,33 @@ body {
     font-size: 14px;
 
     white-space: nowrap;
-
 }
 
 
 .legend-color {
-
-    width: 21px;
-
-    height: 21px;
-
-    display: inline-block;
+    width: 20px;
+    height: 20px;
 
     border-radius: 4px;
 
     border:
         1px solid
-        rgba(0,0,0,0.15);
-
+        rgba(0, 0, 0, 0.15);
 }
 
 
 .legend-color.visited {
-
     background: #3f8f5a;
-
 }
 
 
 .legend-color.upcoming {
-
     background: #d59a3a;
-
 }
 
 
 .legend-color.other {
-
     background: #d9ddd9;
-
 }
 
 
@@ -161,99 +121,15 @@ body {
    CARTE
    ========================================================= */
 
-.map-section {
-
-    width: 100%;
-
-    padding: 0;
-
-}
-
-
 #world-map {
-
     width: 100%;
 
-    height: min(
-        72vh,
-        760px
-    );
+    height:
+        min(72vh, 760px);
 
     min-height: 420px;
 
     background: #dceaf0;
-
-}
-
-
-/* =========================================================
-   DRAPEAUX
-   ========================================================= */
-
-.country-flag-marker {
-
-    background:
-        transparent;
-
-    border: none;
-
-}
-
-
-.flag-circle {
-
-    width: 34px;
-
-    height: 34px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: rgba(
-        255,
-        255,
-        255,
-        0.95
-    );
-
-    border:
-        2px solid
-        rgba(
-            30,
-            40,
-            34,
-            0.75
-        );
-
-    box-shadow:
-        0 2px 6px
-        rgba(
-            0,
-            0,
-            0,
-            0.25
-        );
-
-    font-size: 21px;
-
-    cursor: pointer;
-
-    transition:
-        transform 0.15s ease;
-
-}
-
-
-.flag-circle:hover {
-
-    transform:
-        scale(1.18);
-
 }
 
 
@@ -263,45 +139,34 @@ body {
 
 .tes-country-popup
 .leaflet-popup-content-wrapper {
-
     border-radius: 12px;
-
 }
 
 
 .tes-country-popup
 .leaflet-popup-content {
-
     margin: 15px 17px;
-
 }
 
 
 .country-popup {
-
-    min-width: 170px;
-
+    min-width: 180px;
 }
 
 
 .popup-title {
-
-    font-size: 19px;
+    font-size: 20px;
 
     font-weight: 700;
 
-    margin-bottom: 7px;
-
+    margin-bottom: 8px;
 }
 
 
 .popup-status {
-
     display: inline-block;
 
-    padding:
-        4px
-        9px;
+    padding: 5px 10px;
 
     border-radius: 20px;
 
@@ -309,63 +174,43 @@ body {
 
     font-weight: 700;
 
-    margin-bottom: 10px;
-
+    margin-bottom: 12px;
 }
 
 
 .popup-visited {
-
-    background:
-        #e1f0e5;
-
-    color:
-        #28643d;
-
+    background: #e1f0e5;
+    color: #28643d;
 }
 
 
 .popup-upcoming {
-
-    background:
-        #f8ead2;
-
-    color:
-        #80531a;
-
+    background: #f8ead2;
+    color: #80531a;
 }
 
 
 .popup-cities strong {
-
     display: block;
 
-    margin-bottom: 4px;
-
+    margin-bottom: 5px;
 }
 
 
 .popup-cities ul {
+    margin: 5px 0 0;
 
-    margin:
-        4px
-        0
-        0;
-
-    padding-left: 19px;
-
+    padding-left: 20px;
 }
 
 
 .popup-cities li {
-
-    margin-bottom: 3px;
-
+    margin-bottom: 4px;
 }
 
 
 /* =========================================================
-   LISTES
+   BLOCS DES PAYS
    ========================================================= */
 
 .country-lists {
@@ -384,9 +229,12 @@ body {
 
     background:
         #f7f8f7;
-
 }
 
+
+/* =========================================================
+   BLOC VISITED / UPCOMING
+   ========================================================= */
 
 .country-list {
 
@@ -396,23 +244,31 @@ body {
     border:
         1px solid #e0e4e0;
 
-    border-radius: 12px;
+    border-radius:
+        14px;
 
     padding:
-        20px;
+        22px;
 
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.04);
 }
 
 
 .country-list h2 {
 
+    display: flex;
+
+    align-items: center;
+
     margin:
-        0
-        0
-        15px;
+        0 0 18px;
 
-    font-size: 20px;
+    font-size: 21px;
 
+    letter-spacing:
+        0.3px;
 }
 
 
@@ -422,32 +278,29 @@ body {
 
     display: inline-block;
 
-    width: 15px;
+    width: 16px;
 
-    height: 15px;
+    height: 16px;
 
-    margin-right: 8px;
+    margin-right: 9px;
 
-    border-radius: 3px;
-
+    border-radius: 4px;
 }
 
 
 .visited-list h2::before {
-
-    background:
-        #3f8f5a;
-
+    background: #3f8f5a;
 }
 
 
 .upcoming-list h2::before {
-
-    background:
-        #d59a3a;
-
+    background: #d59a3a;
 }
 
+
+/* =========================================================
+   LISTE DES PAYS
+   ========================================================= */
 
 #visited-countries,
 #upcoming-countries {
@@ -456,44 +309,65 @@ body {
 
     flex-wrap: wrap;
 
-    gap: 7px;
+    gap: 8px;
 
+    align-items: center;
 }
 
 
+/* =========================================================
+   BOUTONS PAYS
+   ========================================================= */
+
 .country-list-item {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 6px;
-
-    padding:
-        7px
-        10px;
-
-    border-radius: 20px;
 
     border: none;
 
+    border-radius: 20px;
+
+    padding:
+        8px 13px;
+
     cursor: pointer;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
     font-size: 13px;
 
-    transition:
-        transform 0.12s ease;
+    font-weight: 600;
 
+    line-height: 1.2;
+
+    transition:
+        transform 0.12s ease,
+        box-shadow 0.12s ease;
 }
 
 
 .country-list-item:hover {
 
     transform:
-        translateY(-1px);
+        translateY(-2px);
 
+    box-shadow:
+        0 3px 7px
+        rgba(0, 0, 0, 0.12);
 }
 
+
+.country-list-item:active {
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   PAYS VISITÉS
+   ========================================================= */
 
 .visited-item {
 
@@ -503,8 +377,15 @@ body {
     color:
         #285e3b;
 
+    border:
+        1px solid
+        #c8dfce;
 }
 
+
+/* =========================================================
+   PAYS À VENIR
+   ========================================================= */
 
 .upcoming-item {
 
@@ -514,20 +395,9 @@ body {
     color:
         #80531a;
 
-}
-
-
-.list-flag {
-
-    font-size: 17px;
-
-}
-
-
-.list-name {
-
-    font-weight: 600;
-
+    border:
+        1px solid
+        #ead4ad;
 }
 
 
@@ -537,21 +407,19 @@ body {
 
 .map-error {
 
+    height: 100%;
+
     display: flex;
 
     align-items: center;
 
     justify-content: center;
 
-    height: 100%;
-
     padding: 30px;
-
-    color:
-        #8a3028;
 
     font-size: 16px;
 
+    color: #8a3028;
 }
 
 
@@ -565,14 +433,12 @@ body {
         Arial,
         Helvetica,
         sans-serif;
-
 }
 
 
 .leaflet-control-zoom a {
 
     font-size: 22px;
-
 }
 
 
@@ -580,9 +446,7 @@ body {
    TABLETTE
    ========================================================= */
 
-@media (
-    max-width: 900px
-) {
+@media (max-width: 900px) {
 
     .site-header {
 
@@ -593,23 +457,30 @@ body {
             column;
 
         gap: 15px;
-
-    }
-
-
-    .legend {
-
-        width: 100%;
-
     }
 
 
     #world-map {
 
-        height: 65vh;
+        height:
+            65vh;
 
-        min-height: 400px;
+        min-height:
+            400px;
+    }
 
+
+    .country-lists {
+
+        padding:
+            22px;
+    }
+
+
+    .country-list {
+
+        padding:
+            18px;
     }
 
 }
@@ -619,78 +490,67 @@ body {
    GSM
    ========================================================= */
 
-@media (
-    max-width: 600px
-) {
+@media (max-width: 600px) {
 
     .site-header {
 
         padding:
-            17px
-            16px
-            14px;
-
+            17px 16px 14px;
     }
 
 
     .brand h1 {
 
-        font-size: 25px;
-
+        font-size:
+            25px;
     }
 
 
     .brand p {
 
-        font-size: 12px;
+        font-size:
+            12px;
 
-        letter-spacing: 2px;
-
+        letter-spacing:
+            2px;
     }
 
 
     .legend {
 
-        gap: 10px;
-
+        gap:
+            10px;
     }
 
 
     .legend-item {
 
-        font-size: 12px;
-
+        font-size:
+            12px;
     }
 
 
     .legend-color {
 
-        width: 17px;
+        width:
+            17px;
 
-        height: 17px;
-
+        height:
+            17px;
     }
 
 
     #world-map {
 
-        height: 58vh;
+        height:
+            58vh;
 
-        min-height: 390px;
-
+        min-height:
+            390px;
     }
 
 
-    .flag-circle {
-
-        width: 30px;
-
-        height: 30px;
-
-        font-size: 18px;
-
-    }
-
+    /* Les deux blocs passent l'un sous l'autre */
 
     .country-lists {
 
@@ -700,27 +560,35 @@ body {
         padding:
             18px 14px;
 
-        gap: 15px;
-
+        gap:
+            15px;
     }
 
 
     .country-list {
 
         padding:
-            15px;
+            16px;
+    }
 
+
+    .country-list h2 {
+
+        font-size:
+            19px;
+
+        margin-bottom:
+            15px;
     }
 
 
     .country-list-item {
 
-        font-size: 12px;
+        font-size:
+            12px;
 
         padding:
-            6px
-            9px;
-
+            7px 10px;
     }
 
 }
