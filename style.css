@@ -1,303 +1,726 @@
 /* =========================================================
    MON TOUR DU MONDE — TES ADVENTURE
-   Style principal
    ========================================================= */
 
 * {
     box-sizing: border-box;
 }
 
+
 html,
 body {
     margin: 0;
     padding: 0;
+
     width: 100%;
+
     min-height: 100%;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #ffffff;
+
+    color: #1d241f;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f5f2;
-    color: #202522;
-}
 
 /* =========================================================
-   EN-TÊTE
+   HEADER
    ========================================================= */
 
 .site-header {
+
     width: 100%;
-    padding: 18px 24px;
+
     display: flex;
-    align-items: center;
+
     justify-content: space-between;
-    gap: 20px;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding:
+        22px
+        30px
+        18px;
+
     background: #ffffff;
-    border-bottom: 1px solid #d8ddd8;
+
+    border-bottom:
+        1px solid #e2e5e2;
+
 }
 
-.brand {
-    flex: 0 0 auto;
-}
 
 .brand h1 {
+
     margin: 0;
-    font-size: 26px;
-    line-height: 1.1;
-    letter-spacing: 1.5px;
-    font-weight: 700;
+
+    font-size: clamp(
+        24px,
+        3vw,
+        38px
+    );
+
+    letter-spacing: 1px;
+
 }
 
+
 .brand p {
-    margin: 6px 0 0;
-    font-size: 13px;
-    letter-spacing: 2px;
-    color: #68706b;
+
+    margin:
+        7px
+        0
+        0;
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    color: #6d746f;
+
 }
+
 
 /* =========================================================
    LÉGENDE
    ========================================================= */
 
 .legend {
+
     display: flex;
+
     align-items: center;
-    justify-content: flex-end;
+
+    gap: 20px;
+
     flex-wrap: wrap;
-    gap: 14px 20px;
+
 }
+
 
 .legend-item {
+
     display: flex;
+
     align-items: center;
-    gap: 7px;
+
+    gap: 8px;
+
     font-size: 14px;
-    color: #4c554f;
+
     white-space: nowrap;
+
 }
+
 
 .legend-color {
+
+    width: 21px;
+
+    height: 21px;
+
     display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 3px;
-    border: 1px solid rgba(0, 0, 0, 0.18);
+
+    border-radius: 4px;
+
+    border:
+        1px solid
+        rgba(0,0,0,0.15);
+
 }
+
 
 .legend-color.visited {
+
     background: #3f8f5a;
+
 }
+
 
 .legend-color.upcoming {
+
     background: #d59a3a;
+
 }
 
+
 .legend-color.other {
+
     background: #d9ddd9;
+
 }
+
 
 /* =========================================================
    CARTE
    ========================================================= */
 
-main {
+.map-section {
+
     width: 100%;
+
+    padding: 0;
+
 }
 
-.map-section {
-    width: 100%;
-    padding: 20px;
-}
 
 #world-map {
+
     width: 100%;
-    height: calc(100vh - 150px);
-    min-height: 520px;
-    background: #dce9ef;
-    border: 1px solid #cbd3d0;
-    overflow: hidden;
+
+    height: min(
+        72vh,
+        760px
+    );
+
+    min-height: 420px;
+
+    background: #dceaf0;
+
 }
+
+
+/* =========================================================
+   DRAPEAUX
+   ========================================================= */
+
+.country-flag-marker {
+
+    background:
+        transparent;
+
+    border: none;
+
+}
+
+
+.flag-circle {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.95
+    );
+
+    border:
+        2px solid
+        rgba(
+            30,
+            40,
+            34,
+            0.75
+        );
+
+    box-shadow:
+        0 2px 6px
+        rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease;
+
+}
+
+
+.flag-circle:hover {
+
+    transform:
+        scale(1.18);
+
+}
+
+
+/* =========================================================
+   POPUP
+   ========================================================= */
+
+.tes-country-popup
+.leaflet-popup-content-wrapper {
+
+    border-radius: 12px;
+
+}
+
+
+.tes-country-popup
+.leaflet-popup-content {
+
+    margin: 15px 17px;
+
+}
+
+
+.country-popup {
+
+    min-width: 170px;
+
+}
+
+
+.popup-title {
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+
+}
+
+
+.popup-status {
+
+    display: inline-block;
+
+    padding:
+        4px
+        9px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+}
+
+
+.popup-visited {
+
+    background:
+        #e1f0e5;
+
+    color:
+        #28643d;
+
+}
+
+
+.popup-upcoming {
+
+    background:
+        #f8ead2;
+
+    color:
+        #80531a;
+
+}
+
+
+.popup-cities strong {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+}
+
+
+.popup-cities ul {
+
+    margin:
+        4px
+        0
+        0;
+
+    padding-left: 19px;
+
+}
+
+
+.popup-cities li {
+
+    margin-bottom: 3px;
+
+}
+
+
+/* =========================================================
+   LISTES
+   ========================================================= */
+
+.country-lists {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 25px;
+
+    padding:
+        30px;
+
+    background:
+        #f7f8f7;
+
+}
+
+
+.country-list {
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid #e0e4e0;
+
+    border-radius: 12px;
+
+    padding:
+        20px;
+
+}
+
+
+.country-list h2 {
+
+    margin:
+        0
+        0
+        15px;
+
+    font-size: 20px;
+
+}
+
+
+.country-list h2::before {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 15px;
+
+    height: 15px;
+
+    margin-right: 8px;
+
+    border-radius: 3px;
+
+}
+
+
+.visited-list h2::before {
+
+    background:
+        #3f8f5a;
+
+}
+
+
+.upcoming-list h2::before {
+
+    background:
+        #d59a3a;
+
+}
+
+
+#visited-countries,
+#upcoming-countries {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+}
+
+
+.country-list-item {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding:
+        7px
+        10px;
+
+    border-radius: 20px;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition:
+        transform 0.12s ease;
+
+}
+
+
+.country-list-item:hover {
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+.visited-item {
+
+    background:
+        #e5f1e8;
+
+    color:
+        #285e3b;
+
+}
+
+
+.upcoming-item {
+
+    background:
+        #f8ecd9;
+
+    color:
+        #80531a;
+
+}
+
+
+.list-flag {
+
+    font-size: 17px;
+
+}
+
+
+.list-name {
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   ERREUR CARTE
+   ========================================================= */
+
+.map-error {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 100%;
+
+    padding: 30px;
+
+    color:
+        #8a3028;
+
+    font-size: 16px;
+
+}
+
 
 /* =========================================================
    LEAFLET
    ========================================================= */
 
 .leaflet-container {
-    width: 100%;
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #dce9ef;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
 }
 
-.leaflet-control-zoom {
-    border: 0 !important;
-}
 
 .leaflet-control-zoom a {
-    width: 38px !important;
-    height: 38px !important;
-    line-height: 38px !important;
-    font-size: 20px !important;
+
+    font-size: 22px;
+
 }
 
-.leaflet-control-attribution {
-    font-size: 10px;
-}
 
 /* =========================================================
-   PAYS
+   TABLETTE
    ========================================================= */
 
-.country-label {
-    background: transparent;
-    border: 0;
-    box-shadow: none;
-    color: #17201a;
-    font-size: 11px;
-    font-weight: 700;
-    text-align: center;
-    white-space: nowrap;
-    text-shadow:
-        1px 1px 2px #ffffff,
-        -1px -1px 2px #ffffff,
-        1px -1px 2px #ffffff,
-        -1px 1px 2px #ffffff;
-}
-
-.country-label::before {
-    display: none;
-}
-
-/* =========================================================
-   RESPONSIVE — TABLETTE
-   ========================================================= */
-
-@media (max-width: 900px) {
+@media (
+    max-width: 900px
+) {
 
     .site-header {
-        padding: 16px 18px;
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap: 15px;
+
     }
 
-    .brand h1 {
-        font-size: 22px;
-    }
-
-    .brand p {
-        font-size: 12px;
-    }
 
     .legend {
-        gap: 10px 14px;
+
+        width: 100%;
+
     }
 
-    .legend-item {
-        font-size: 13px;
-    }
-
-    .map-section {
-        padding: 12px;
-    }
 
     #world-map {
-        height: calc(100vh - 125px);
-        min-height: 480px;
+
+        height: 65vh;
+
+        min-height: 400px;
+
     }
+
 }
 
+
 /* =========================================================
-   RESPONSIVE — GSM
+   GSM
    ========================================================= */
 
-@media (max-width: 600px) {
+@media (
+    max-width: 600px
+) {
 
     .site-header {
-        padding: 13px 12px;
-        display: block;
+
+        padding:
+            17px
+            16px
+            14px;
+
     }
 
-    .brand {
-        text-align: center;
-    }
 
     .brand h1 {
-        font-size: 19px;
-        letter-spacing: 1px;
+
+        font-size: 25px;
+
     }
+
 
     .brand p {
-        margin-top: 4px;
-        font-size: 11px;
-        letter-spacing: 1.5px;
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+
     }
+
 
     .legend {
-        margin-top: 11px;
-        justify-content: center;
-        gap: 7px 12px;
+
+        gap: 10px;
+
     }
 
+
     .legend-item {
-        font-size: 11px;
-        gap: 5px;
+
+        font-size: 12px;
+
     }
+
 
     .legend-color {
-        width: 12px;
-        height: 12px;
+
+        width: 17px;
+
+        height: 17px;
+
     }
 
-    .map-section {
-        padding: 0;
-    }
 
     #world-map {
-        width: 100%;
-        height: calc(100vh - 105px);
-        min-height: 430px;
-        border-left: 0;
-        border-right: 0;
-        border-radius: 0;
+
+        height: 58vh;
+
+        min-height: 390px;
+
     }
 
-    .country-label {
-        font-size: 9px;
+
+    .flag-circle {
+
+        width: 30px;
+
+        height: 30px;
+
+        font-size: 18px;
+
     }
 
-    .leaflet-control-zoom {
-        margin: 10px !important;
+
+    .country-lists {
+
+        grid-template-columns:
+            1fr;
+
+        padding:
+            18px 14px;
+
+        gap: 15px;
+
     }
 
-    .leaflet-control-zoom a {
-        width: 42px !important;
-        height: 42px !important;
-        line-height: 42px !important;
-        font-size: 22px !important;
-    }
-}
 
-/* =========================================================
-   PETITS GSM
-   ========================================================= */
+    .country-list {
 
-@media (max-width: 380px) {
+        padding:
+            15px;
 
-    .brand h1 {
-        font-size: 17px;
     }
 
-    .brand p {
-        font-size: 10px;
+
+    .country-list-item {
+
+        font-size: 12px;
+
+        padding:
+            6px
+            9px;
+
     }
 
-    .legend {
-        gap: 6px 9px;
-    }
-
-    .legend-item {
-        font-size: 10px;
-    }
-
-    .country-label {
-        font-size: 8px;
-    }
 }
