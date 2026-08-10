@@ -378,6 +378,15 @@ const countries = {
     "Malaysia": { status: "upcoming", cities: [] },
     "Singapore": { status: "upcoming", cities: [] },
     "Philippines": { status: "upcoming", cities: [] },
+    "Indonesia": {
+    status: "visited",
+    cities: [
+        { name: "Denpasar", lat: -8.6500, lng: 115.2167 },
+        { name: "Ubud", lat: -8.5069, lng: 115.2625 },
+        { name: "Uluwatu", lat: -8.8291, lng: 115.0849 },
+        { name: "Nusa Penida", lat: -8.7336, lng: 115.4568 }
+    ]
+},
     "Nepal": { status: "upcoming", cities: [] },
     "India": { status: "upcoming", cities: [] },
     "China": { status: "upcoming", cities: [] },
